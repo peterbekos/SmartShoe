@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_light2">#A8E3FF</color>
+    <color name="blue_light">#77D3FF</color>
+    <color name="blue">#0CB0FF</color>
+    <color name="blue_dark">#005C89</color>
+    <color name="blue_dark2">#00476A</color>
+
+    <color name="yellow_light2">#FFE6A4</color>
+    <color name="yellow_light">#FFD770</color>
+    <color name="yellow">#FFB800</color>
+    <color name="yellow_dark">#D99D00</color>
+    <color name="yellow_dark2">#A77900</color>
+
+    <color name="red_light2">#FFB7A4</color>
+    <color name="red_light">#FF8E70</color>
+    <color name="red">#FF3500</color>
+    <color name="red_dark">#D92D00</color>
+    <color name="red_dark2">#A72300</color>
+
+
+    <color name="primary">#03A9F4</color>
+    <color name="primary_light">#B3E5FC</color>
+    <color name="primary_dark">#0288D1</color>
+
+    <color name="secondary">#3F51B5</color>
+    <color name="secondary_light">#C5CAE9</color>
+    <color name="secondary_dark">#303F9F</color>
+
+    <color name="highlight">#FF9800</color>
+
+
+
+</resources>
