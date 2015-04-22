@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark">
+    android:background="@color/primary_light">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:layout_margin="12dp"
         android:background="@color/primary"
         android:gravity="center"
@@ -17,52 +17,149 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5">
+        android:layout_weight="4">
 
-        <com.db.circularcounter.CircularCounter
-            xmlns:meter="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/meter"
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/step_progress"
+            android:layout_margin="14dp"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp"
-            meter:range="60"
-            meter:textSize="100sp"
-            meter:textColor="#ffffff"
-            meter:metricSize="20sp"
-            meter:metricText="metric"
-            />
+            custom:arc_progress="30"
+            custom:arc_bottom_text="Steps"/>
 
-        <TextView
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calorie_progress"
+            android:layout_margin="14dp"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="Steps"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Calories"/>
+            custom:arc_progress="30"
+            custom:arc_bottom_text="Calories"/>
 
 
         </LinearLayout>
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:gravity="center"
-        android:text="Quick Balance Info"/>
+        android:layout_weight="1">
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            custom:progress_unreached_color="#CCCCCC"
+            custom:progress_reached_color="#3498DB"
+
+            custom:progress_unreached_bar_height="0.75dp"
+            custom:progress_reached_bar_height="1.5dp"
+
+            custom:progress_text_size="10sp"
+            custom:progress_text_color="#3498DB"
+            custom:progress_text_offset="1dp"
+            custom:progress_text_visibility="visible"
+
+            custom:max="100"
+            custom:progress="50"
+            />
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            custom:progress_unreached_color="#CCCCCC"
+            custom:progress_reached_color="#3498DB"
+
+            custom:progress_unreached_bar_height="0.75dp"
+            custom:progress_reached_bar_height="1.5dp"
+
+            custom:progress_text_size="10sp"
+            custom:progress_text_color="#3498DB"
+            custom:progress_text_offset="1dp"
+            custom:progress_text_visibility="visible"
+
+            custom:max="100"
+            custom:progress="50"
+            />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:background="@color/secondary"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="Footer Info"/>
+        android:text="Balance"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            custom:progress_unreached_color="#CCCCCC"
+            custom:progress_reached_color="#3498DB"
+
+            custom:progress_unreached_bar_height="0.75dp"
+            custom:progress_reached_bar_height="1.5dp"
+
+            custom:progress_text_size="10sp"
+            custom:progress_text_color="#3498DB"
+            custom:progress_text_offset="1dp"
+            custom:progress_text_visibility="visible"
+
+            custom:max="100"
+            custom:progress="50"
+            />
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            custom:progress_unreached_color="#CCCCCC"
+            custom:progress_reached_color="#3498DB"
+
+            custom:progress_unreached_bar_height="0.75dp"
+            custom:progress_reached_bar_height="1.5dp"
+
+            custom:progress_text_size="10sp"
+            custom:progress_text_color="#3498DB"
+            custom:progress_text_offset="1dp"
+            custom:progress_text_visibility="visible"
+
+            custom:max="100"
+            custom:progress="50" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <view
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            class="com.dacer.androidcharts.ClockPieView"
+            android:id="@+id/clock_pie_view" />
+
+
+        </LinearLayout>
+
 
 </LinearLayout>
