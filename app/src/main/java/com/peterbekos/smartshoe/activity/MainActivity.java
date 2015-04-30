@@ -33,6 +33,8 @@ public class MainActivity extends ActionBarActivity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
+    private boolean bluetoothConnected = false;
+    private MenuItem connectionButton;
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -120,6 +122,9 @@ public class MainActivity extends ActionBarActivity
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
             getMenuInflater().inflate(R.menu.main, menu);
+
+            connectionButton = menu.findItem(R.id.action_conected);
+
             restoreActionBar();
             return true;
         }
@@ -134,11 +139,22 @@ public class MainActivity extends ActionBarActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        /*
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_conected) {
+
+            if (bluetoothConnected == true) {
+
+                connectionButton.setTitle("Not Connected");
+                bluetoothConnected = false;
+
+            } else if (bluetoothConnected == false) {
+
+                connectionButton.setTitle("Connected");
+                bluetoothConnected = true;
+
+            }
+
             return true;
         }
-        */
 
         return super.onOptionsItemSelected(item);
     }
