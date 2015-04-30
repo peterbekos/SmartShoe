@@ -28,14 +28,23 @@ public enum App {
             SettingsFragment.SECTION_NAME,
     };
 
-}
+    public static Data data = new Data();
+    public static Settings settings = new Settings();
 
-/*
-public enum SingletonName {
->INSTANCE;
->private static var name;
->public static void setter(var) {
->>SingletonName.name = var
->}
+    public static float getStepProgress() {
+        return 100 * (float)data.getSteps() / (float)settings.getStepGoal();
+    }
+    public static float getCaloriesProgress() {
+        return 100 *  (float)App.data.getCalories() / (float)App.settings.getCalorieGoal();
+    }
+    public static float getDistanceProgress() {
+        return 100 * App.data.getDistance() / App.settings.getDistanceGoal();
+    }
+    public static float getRunProgress() {
+        return 100 * App.data.getRunTime() / App.settings.getRunGoal();
+    }
+    public static float getIdleProgress() {
+        return 100 - (100 * App.data.getIdleTime() / App.settings.getIdleGoal());
+    }
+
 }
- */

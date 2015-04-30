@@ -4,162 +4,72 @@
     android:layout_height="match_parent"
     android:background="@color/primary_light">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:layout_margin="12dp"
-        android:background="@color/primary"
-        android:gravity="center"
-        android:text="Logo"/>
-
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4">
-
-        <com.github.lzyzsd.circleprogress.ArcProgress
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/step_progress"
-            android:layout_margin="14dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            custom:arc_progress="30"
-            custom:arc_bottom_text="Steps"/>
-
-        <com.github.lzyzsd.circleprogress.ArcProgress
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/calorie_progress"
-            android:layout_margin="14dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            custom:arc_progress="30"
-            custom:arc_bottom_text="Calories"/>
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/primary_dark">
 
 
-        </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <com.daimajia.numberprogressbar.NumberProgressBar
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
+        <TextView android:id="@+id/home_general_tab"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="General Info"/>
 
-            custom:progress_unreached_color="#CCCCCC"
-            custom:progress_reached_color="#3498DB"
-
-            custom:progress_unreached_bar_height="0.75dp"
-            custom:progress_reached_bar_height="1.5dp"
-
-            custom:progress_text_size="10sp"
-            custom:progress_text_color="#3498DB"
-            custom:progress_text_offset="1dp"
-            custom:progress_text_visibility="visible"
-
-            custom:max="100"
-            custom:progress="50"
-            />
-
-        <com.daimajia.numberprogressbar.NumberProgressBar
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
+        <TextView android:id="@+id/home_steps_tab"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="Steps"/>
 
-            custom:progress_unreached_color="#CCCCCC"
-            custom:progress_reached_color="#3498DB"
+        <TextView android:id="@+id/home_calories_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="Calories"/>
 
-            custom:progress_unreached_bar_height="0.75dp"
-            custom:progress_reached_bar_height="1.5dp"
+        <TextView android:id="@+id/home_distance_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="Distance"/>
 
-            custom:progress_text_size="10sp"
-            custom:progress_text_color="#3498DB"
-            custom:progress_text_offset="1dp"
-            custom:progress_text_visibility="visible"
+        <TextView android:id="@+id/home_idle_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:text="Idle"/>
 
-            custom:max="100"
-            custom:progress="50"
-            />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="Balance"/>
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="Today, April 22, 2015"
+        android:layout_margin="4dp"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <FrameLayout android:id="@+id/home_frame"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent">
 
-        <com.daimajia.numberprogressbar.NumberProgressBar
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-
-            custom:progress_unreached_color="#CCCCCC"
-            custom:progress_reached_color="#3498DB"
-
-            custom:progress_unreached_bar_height="0.75dp"
-            custom:progress_reached_bar_height="1.5dp"
-
-            custom:progress_text_size="10sp"
-            custom:progress_text_color="#3498DB"
-            custom:progress_text_offset="1dp"
-            custom:progress_text_visibility="visible"
-
-            custom:max="100"
-            custom:progress="50"
-            />
-
-        <com.daimajia.numberprogressbar.NumberProgressBar
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-
-            custom:progress_unreached_color="#CCCCCC"
-            custom:progress_reached_color="#3498DB"
-
-            custom:progress_unreached_bar_height="0.75dp"
-            custom:progress_reached_bar_height="1.5dp"
-
-            custom:progress_text_size="10sp"
-            custom:progress_text_color="#3498DB"
-            custom:progress_text_offset="1dp"
-            custom:progress_text_visibility="visible"
-
-            custom:max="100"
-            custom:progress="50" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2">
-
-        <view
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            class="com.dacer.androidcharts.ClockPieView"
-            android:id="@+id/clock_pie_view" />
-
-
-        </LinearLayout>
+    </FrameLayout>
 
 
 </LinearLayout>

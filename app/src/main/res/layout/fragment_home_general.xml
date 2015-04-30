@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffffffff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Steps:"
+        android:textColor="@color/primary_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/step_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="5000"
+            android:textColor="@color/blue_light"
+            android:textSize="24sp"/>
+
+        <TextView android:id="@+id/step_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="of goal 10000"
+            android:textColor="@color/blue_light"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/step_data"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:progress_unreached_color="#CCCCCC"
+        custom:progress_reached_color="@color/blue_light"
+
+        custom:progress_unreached_bar_height="0.75dp"
+        custom:progress_reached_bar_height="1.5dp"
+
+        custom:progress_text_size="10sp"
+        custom:progress_text_color="@color/blue_light"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_visibility="visible"
+
+        custom:max="100"
+        custom:progress="50"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calories Burned:"
+        android:textColor="@color/primary_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/calorie_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="1200"
+            android:textColor="@color/red_light"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/calorie_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="of goal 1500"
+            android:textColor="@color/red_light"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/calorie_data"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:progress_unreached_color="#CCCCCC"
+        custom:progress_reached_color="@color/red_light"
+
+        custom:progress_unreached_bar_height="0.75dp"
+        custom:progress_reached_bar_height="1.5dp"
+
+        custom:progress_text_size="10sp"
+        custom:progress_text_color="@color/red_light"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_visibility="visible"
+
+        custom:max="100"
+        custom:progress="80"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Distance:"
+        android:textColor="@color/primary_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/distance_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="1.5 mi"
+            android:textColor="@color/yellow"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/distance_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="of goal 5 mi"
+            android:textColor="@color/yellow"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/distance_data"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:progress_unreached_color="#CCCCCC"
+        custom:progress_reached_color="@color/yellow"
+
+        custom:progress_unreached_bar_height="0.75dp"
+        custom:progress_reached_bar_height="1.5dp"
+
+        custom:progress_text_size="10sp"
+        custom:progress_text_color="@color/yellow"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_visibility="visible"
+
+        custom:max="100"
+        custom:progress="30"
+        android:layout_marginBottom="8dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active Run:"
+        android:textColor="@color/red"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/run_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="20 min"
+            android:textColor="@color/red"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/run_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="of goal 45 min"
+            android:textColor="@color/red"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/run_data"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:progress_unreached_color="#CCCCCC"
+        custom:progress_reached_color="@color/red"
+
+        custom:progress_unreached_bar_height="0.75dp"
+        custom:progress_reached_bar_height="1.5dp"
+
+        custom:progress_text_size="10sp"
+        custom:progress_text_color="@color/red"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_visibility="visible"
+
+        custom:max="100"
+        custom:progress="44"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Idle Time:"
+        android:textColor="@color/blue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/idle_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="50 min"
+            android:textColor="@color/blue"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/idle_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="goal: keep under 60 min"
+            android:textColor="@color/blue"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/idle_data"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:progress_unreached_color="#CCCCCC"
+        custom:progress_reached_color="@color/blue"
+
+        custom:progress_unreached_bar_height="0.75dp"
+        custom:progress_reached_bar_height="1.5dp"
+
+        custom:progress_text_size="10sp"
+        custom:progress_text_color="@color/blue"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_visibility="visible"
+
+        custom:max="100"
+        custom:progress="83"
+        android:layout_marginBottom="8dp"
+        />
+
+</LinearLayout>

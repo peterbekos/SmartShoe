@@ -20,18 +20,17 @@ public class DemoFragment extends BaseFragment {
         return SECTION_NAME;
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_demo;
+    }
+
     public static DemoFragment newInstance() {
         DemoFragment fragment = new DemoFragment();
         return fragment;
     }
 
     public DemoFragment() {
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_demo, container, false);
-        return rootView;
     }
 
 }

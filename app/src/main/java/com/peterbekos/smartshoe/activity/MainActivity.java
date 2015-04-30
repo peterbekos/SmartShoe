@@ -52,6 +52,22 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        setMockData();
+    }
+
+    private void setMockData() {
+        App.settings.setStepGoal(10000);
+        App.settings.setCalorieGoal(1500);
+        App.settings.setDistanceGoal(1.5f);
+        App.settings.setRunGoal(45f);
+        App.settings.setIdleGoal(60f);
+
+        App.data.setSteps(5000);
+        App.data.setCalories(1200);
+        App.data.setDistance(0.75f);
+        App.data.setRunTime(20f);
+        App.data.setIdleTime(50f);
     }
 
     @Override

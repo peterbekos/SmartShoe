@@ -29,9 +29,7 @@ public class RunFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_runmode, container, false);
-        return rootView;
+    public int getLayoutId() {
+        return R.layout.fragment_runmode;
     }
-
 }

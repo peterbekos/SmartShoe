@@ -20,18 +20,17 @@ public class StatsFragment extends BaseFragment {
         return SECTION_NAME;
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_stats;
+    }
+
     public static StatsFragment newInstance() {
         StatsFragment fragment = new StatsFragment();
         return fragment;
     }
 
     public StatsFragment() {
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_stats, container, false);
-        return rootView;
     }
 
 }

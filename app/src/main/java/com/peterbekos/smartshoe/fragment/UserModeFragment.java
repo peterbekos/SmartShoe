@@ -12,6 +12,10 @@ import com.peterbekos.smartshoe.R;
  * Created by peterbekos on 3/17/15.
  */
 public class UserModeFragment extends BaseFragment {
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_usermode;
+    }
 
     public static final String SECTION_NAME = "User Mode";
 
@@ -28,12 +32,5 @@ public class UserModeFragment extends BaseFragment {
     public UserModeFragment() {
 
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_usermode, container, false);
-        return rootView;
-    }
-
 
 }

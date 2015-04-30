@@ -22,6 +22,11 @@ public class InfoFragment extends BaseFragment
         return SECTION_NAME;
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_info;
+    }
+
     public static InfoFragment newInstance() {
         InfoFragment fragment = new InfoFragment();
         return fragment;
@@ -33,12 +38,12 @@ public class InfoFragment extends BaseFragment
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_info, container, false);
+        View view = super.onCreateView(inflater, container, savedInstanceState);
 
-        ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.info_pager);
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.info_pager);
         viewPager.setAdapter(new InfoPagerAdapter(getFragmentManager()));
 
-        return rootView;
+        return view;
     }
 
 
