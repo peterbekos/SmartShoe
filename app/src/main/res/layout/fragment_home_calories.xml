@@ -13,6 +13,7 @@
         custom:circle_progress="80"/>
 
     <TextView
+        android:id="@+id/data_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Total Calories Burned: 1200 / 1500"

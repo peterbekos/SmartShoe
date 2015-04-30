@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.dacer.androidcharts.BarView;
 import com.github.lzyzsd.circleprogress.CircleProgress;
@@ -19,6 +20,7 @@ public class HomeCaloriesFragment extends BaseFragment {
 
     CircleProgress circleProgress;
     BarView barView;
+    TextView dataText;
 
     @Override
     public String getSectionName() {
@@ -41,8 +43,10 @@ public class HomeCaloriesFragment extends BaseFragment {
 
         circleProgress = (CircleProgress) view.findViewById(R.id.circle_progress);
         barView = (BarView) view.findViewById(R.id.bar_view);
+        dataText = (TextView) view.findViewById(R.id.data_text);
 
         circleProgress.setProgress((int) App.getCaloriesProgress());
+        dataText.setText("Total Calories Burned: " + App.data.getSteps() + " / " + App.settings.getStepGoal());
 
         //5000 / 10000
 

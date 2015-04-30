@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.dacer.androidcharts.BarView;
 import com.github.lzyzsd.circleprogress.CircleProgress;
@@ -20,6 +21,7 @@ public class HomeStepsFragment extends BaseFragment {
 
     CircleProgress circleProgress;
     BarView barView;
+    TextView dataText;
 
     @Override
     public String getSectionName() {
@@ -42,11 +44,10 @@ public class HomeStepsFragment extends BaseFragment {
 
         circleProgress = (CircleProgress) view.findViewById(R.id.circle_progress);
         barView = (BarView) view.findViewById(R.id.bar_view);
+        dataText = (TextView) view.findViewById(R.id.data_text);
 
         circleProgress.setProgress((int)App.getStepProgress());
-
-
-        //5000 / 10000
+        dataText.setText("Total Steps: " + App.data.getSteps() + " / " + App.settings.getStepGoal());
 
         final ArrayList<String> strings = new ArrayList<String>();
         strings.add("7AM");
